@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SchedulerComponent from './components/public/scheduler';
+import VerticalDayWorkspace from './components/public/vertical/verticalDayWorkspace';
 
 function App() {
+  const appointments = [{
+    startDate: new Date(Date.UTC(2022, 6, 5, 10, 45)),
+    endDate: new Date(Date.UTC(2022, 6, 5, 14, 45)),
+    text: 'My appointment 1',
+  },
+  {
+    startDate: new Date(Date.UTC(2022, 6, 6, 14, 45)),
+    endDate: new Date(Date.UTC(2022, 6, 6, 16, 25)),
+    text: 'My appointment 2',
+  }];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SchedulerComponent
+      appointments={appointments}
+      cellDurationInMinutes={60}
+    >
+      <VerticalDayWorkspace />
+    </SchedulerComponent>
   );
 }
 

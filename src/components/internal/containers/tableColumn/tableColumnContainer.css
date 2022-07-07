@@ -1,0 +1,8 @@
+.table-column {
+    flex: 1 1;
+    border-right: 1px solid rgba(221,221,221,.6);
+}
+
+.table-column__payload {
+    position: relative;
+}

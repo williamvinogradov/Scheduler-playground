@@ -1,0 +1,8 @@
+.table-header-cell {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+    color: #333;
+    border-bottom: 1px solid rgba(221,221,221,.6);
+}
